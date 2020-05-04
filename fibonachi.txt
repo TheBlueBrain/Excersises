@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class fibbonachi {
+	public static void main(String[] args) {
+		System.out.println("kiek skaiciu nori");
+		//sukuriamas skaitymo obijektas ir irasomas i intigeri a
+		Scanner scan = new Scanner(System.in);
+		int a=scan.nextInt();
+		//uzdaromas skaitymo obijektas
+		scan.close();
+		//sukuriami intigeriai
+		int b=0;
+		int c = 1;
+		int d;
+		//atspauzdinamas pirmas fibbonachi skaicius
+		System.out.println(b);
+		if(a>1) {
+			//atspauzdinamas antras fibbonachi skaiciai
+			System.out.println(c);
+			//atspauzdinami kiti fibbonachi skaiciai
+			for(int x=2;x<a;x++) {
+				d=b+c;
+				System.out.println(d);
+				b=c;
+				c=d;
+			}
+		}
+	}
+
+}

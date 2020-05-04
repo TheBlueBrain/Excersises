@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Skaiciai {
+	public static void main(String[] args) {
+		//sukuriamas skaitymo obijektas ir skaiciai
+		Scanner scan = new Scanner(System.in);
+		int a, b;
+		System.out.println("Ivesk pirma skaiciu");
+		//skaitomi pirmas ir antras skaicius
+		a = scan.nextInt();
+		System.out.println("Ivesk antra skaiciu");
+		b = scan.nextInt();
+		System.out.println(a + " " + b);
+		//uzdaromas skaitymo obijektas
+		scan.close();
+		Didziausias(a, b);
+		Lyginis(a);
+		Lyginis(b);	
+	}
+	 static void Didziausias(int a, int b) {
+		 //tikrina kuris didziausias
+		System.out.println("Didziausias yra " + Math.max(a, b));
+	}
+	 static void Lyginis(int a) {
+	//tikrina ar lyginis ar ne
+	 System.out.println(a + " - " + (a%2==0?"lyginis":"nelyginis"));
+	 }
+}

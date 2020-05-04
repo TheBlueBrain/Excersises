@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class arrays {
+	public static void main(String[] args) {
+		System.out.println("Kiek skaiciu bus ivesta?");
+		//sukuriamas skaitymo obijektas
+		Scanner scan = new Scanner(System.in);
+		//nuskaitomas a
+		int a = scan.nextInt();
+		//sukuriamas array b kurios ilgis a
+		int b[]=new int [a];
+		System.out.println("Ivesk skaicius");
+		for(int x = 0;x<a;x++) {
+			//skaiciai irasomi i b
+			b[x]=scan.nextInt();
+		}
+		System.out.println("didziausias yra " + max(b));
+		System.out.println("maziausias yra " + min(b));
+		System.out.println("vidurkis yra " + average(b));		
+		scan.close();
+	}
+	public static int max(int a[]) {
+		//sukuriamas skaicius kuris lygus pirmam array skaiciui ir tikrina ar yra didesniu
+		int x = a[0];
+		for(int z=1;z<a.length;z++) {
+			if(a[z]>x) {
+				x=a[z];
+			}
+		}
+		return x;
+	}
+	public static int min(int a[]) {
+		//sukuriamas skaicius kuris lygus pirmam array skaiciui ir tikrina ar yra mazesniu
+		int x = a[0];
+		for(int z=1;z<a.length;z++) {
+			if(a[z]<x) {
+				x=a[z];
+			}
+		}
+		return x;
+	}
+	public static double average (int a[]) {
+		double sum=0;
+		//sudedami array skaiciai ir padalinama is array ilgioS
+		for(int x = 0;x<a.length;x++) {
+			sum+=a[x];
+		}
+		return sum/a.length;
+	}
+}

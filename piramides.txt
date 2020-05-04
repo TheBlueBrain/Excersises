@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class piramides {
+	public static void main(String[] args) {
+		//sukuriamas skaitymo obijektas
+		Scanner scan = new Scanner(System.in);
+		System.out.println("irasyk skaiciu nuo 1 iki 15");
+		//nuskaitomas a
+		int a=scan.nextInt();
+		while(a<0||a>=16) {
+			//tikrinama ar x yra <1 ir >16
+		System.out.println("rasyk dar karta");
+		a = scan.nextInt();
+		}
+		//uzdaromas skaitymo obijektas
+		scan.close();
+		//piramide a
+	pira(a);
+	//piramide b
+	pirb(a);
+	}
+ static void pira(int a) {
+	 for(int x = 0;x<a;x++) {
+			for(int y = 0;y<x+1;y++) {
+				// piesiama piramide
+			System.out.print("#");
+			}
+		System.out.println();
+		}
+ }
+ static void pirb(int a) {
+	 //sukuriamas int b
+	 int b = a-1;
+	 for(int x = 0;x<a;x++) {
+		 for(int y=0;y<b;y++) {
+			 //rasomi tarpai
+			 System.out.print(" ");
+		 }
+		 for(int y =1;y<2*(a-b);y++) {
+			 //piesiama piramide
+			 System.out.print("#");
+		 }
+		 b--;
+		 System.out.println();
+	 }
+ }
+}
