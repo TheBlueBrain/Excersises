@@ -15,7 +15,7 @@ public class arrays {
 		}
 		System.out.println("didziausias yra " + max(b));
 		System.out.println("maziausias yra " + min(b));
-		System.out.println("vidurkis yra " + average(b));		
+		System.out.println("vidurkis yra " + average(b));
 		scan.close();
 	}
 	public static int max(int a[]) {
@@ -47,3 +47,4 @@ public class arrays {
 		return sum/a.length;
 	}
 }
+//
